@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const URI = "mongodb+srv://QuadFlyTeam:QUADFLY.team20@clusterquadfly-i6m41.mongodb.net/test?retryWrites=true&w=majority";
+const URI = "mongodb+srv://QuadFlyTeam:Password@clusterquadfly-i6m41.mongodb.net/test?retryWrites=true&w=majority";
 
 mongoose.connect(URI,{
         useCreateIndex: true,
