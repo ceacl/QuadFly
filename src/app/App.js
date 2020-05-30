@@ -1,43 +1,33 @@
-import React, { Component } from 'react';
-import {
-    BrowserRouter as Router,
-    Route
-} from 'react-router-dom';
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import HomeSection from './components/HomeSection'
-import DroneDetails from "./components/DroneDetails";
+import Home from '../container/Home'; 
+import DroneDetails from '../container/DroneDetails';
+import Products from '../container/Products';
+import AboutUs from '../container/AboutUs'; 
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
-class App extends Component 
-{
-    render() {
 
-       return (
-        
-       <div className="App"> 
+function App() { 
+  return (
+    <Router>
 
-        <div>
-            <Router>
-            
-            <Navbar/>
-            <Route exact path="/" component={HomeSection}/>
-            <Route path="dronedetails/id:1" component={DroneDetails}/>
-            <Route path="dronedetails/id:2" component={DroneDetails}/>
-            <Route path="dronedetails/id:3" component={DroneDetails}/>
+          <Navbar/>
 
-            <HomeSection/>
-            <DroneDetails/>
-            
-            </Router>
-        </div>
-            
-         
-            <Footer/>   
-        </div>
+          <Route path="/" exact component={Home}/>
+          <Route path="/phantom/:id" component={DroneDetails}/>
+          <Route path="/mavicair/:id" component={DroneDetails}/>
+          <Route path="/spark/:id" component={DroneDetails}/>
+          <Route path="/products" component={Products}/>
+          <Route path="/about-us" component={AboutUs}/>
 
-       ) ;
-    }
+          <Footer/>
+
+      </Router>
+
+  );
 }
 
 export default App;

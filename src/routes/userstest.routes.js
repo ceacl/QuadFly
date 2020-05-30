@@ -3,7 +3,7 @@ const router = express.Router();
 
 const UserTest = require('../models/userTest');
 
-router.get('/',  async (req, res) => 
+router.get('/users',  async (req, res) => 
 {
     const users = await UserTest.find();
     console.log(users);

@@ -1,7 +1,15 @@
-.divnav
+body{
+    background-color: #eaeaea;
+}
+
+#navstyle{
+    margin-top: 10px;
+}
+
+#divnav
 {
-    background-color: transparent;
-    background: transparent;
+    background-color: black;
+    background: black;
     color: aliceblue;
 
 }
@@ -12,8 +20,8 @@
 
 .form-control
 {
-    background-color: transparent;
-    background: transparent;
+    background-color: black;
+    background: black;
 }
 
 navbtsn
@@ -50,41 +58,10 @@ navbtsn
 
 /**___________HomeSection______________________________________________________________**/
 
-#rowSection
-{
-    background-color: white;
-    padding: 20px;
-    padding-left: 10px;
-}
+#bannerHome{
 
-
-.homeSection
-{
-    background-color:white;
-}
-
-#cardLeft
-{
-    background-color: green;
-}
-
-#cardRight
-{
-    background-color: magenta;
-    padding: 10%;
-}
-
-#cardLeftCenter
-{
-    background-color: black;
-    margin-top: 5%;
-   
-}
-
-#cardRigthRow
-{
-    background-color: black;
-    margin-top: 5%;
+    width: 950px;
+    margin-top: 10px;
 }
 
 /**____________Modal__________________________________________________________________________________________________**/
