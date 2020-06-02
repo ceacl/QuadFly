@@ -6,7 +6,7 @@ class Products extends Component
     {
         return (
             <div>
-                Products
+                Cambiar
             </div>
         )
     }
