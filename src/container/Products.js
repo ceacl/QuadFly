@@ -18,7 +18,7 @@ class Products extends Component
     {
         return (
             <div>
-                Cambiar
+                Cambiar2
             </div>
         )
     }
