@@ -9,7 +9,6 @@ import AboutUs from '../container/AboutUs';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-
 function App() { 
   return (
     <Router>
