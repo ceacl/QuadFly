@@ -60,8 +60,8 @@ navbtsn
 
 #bannerHome{
 
-    width: 950px;
-    margin-top: 10px;
+    width: 100%;
+
 }
 
 /**____________Modal__________________________________________________________________________________________________**/
@@ -88,4 +88,12 @@ navbtsn
 
 .modal-footer-full-width  {
     border-top: 1px solid #9ea2a2 !important;
+}
+
+/**___________Products______________________________________________________________**/
+
+#btn{
+
+    margin-top: 2%;
+    margin-right: 1%;
 }
