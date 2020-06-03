@@ -13,14 +13,14 @@ export default class Home extends Component
         return (
             <div>
                
-
+               <div className="col s12 m12 16">
+                        <img src={banner} className="responsive-img" alt="" id="bannerHome"/>        
+                        </div>
                 <div className="container">
 
                     <div className="row">
 
-                        <div className="col s12 m12 16">
-                        <img src={banner} className="responsive-img" alt="" id="bannerHome"/>        
-                        </div>
+                        
                     
                         <div className="col s12 m6 l6">
                             
