@@ -7,7 +7,7 @@ class Navbar extends Component
     render(){
         return (
                
-            <nav className="nav-wrapper container black" id="navstyle">
+            <nav className="nav-wrapper black" id="navstyle">
     
             <div className="container">
         
