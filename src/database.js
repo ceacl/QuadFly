@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const URI = "mongodb+srv://QuadFlyTeam:QUADFLY.team20@clusterquadfly-i6m41.mongodb.net/test?retryWrites=true&w=majority";
 
 mongoose.connect(URI,{

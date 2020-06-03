@@ -14,7 +14,25 @@ module.exports = {
             use: 'babel-loader',
             test: /\.js$/,
             exclude: /node_modules/
+        },
+        {
+            test:/\.css$/,
+            use: 'css-loader'
+        },
+        {
+            test: /\.(gif|png|jpe?g|svg)$/i,
+            use:[     
+                    {
+                        loader: 'file-loader',
+                        options: 
+                        {
+                            name:"[name].[hash].[ext]",
+                            outputPath: "imgs",
+                            
+                        },  
+                    }, 
+                ],
         }]
     }
 
-}
+}  

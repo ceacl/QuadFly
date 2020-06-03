@@ -14,6 +14,10 @@ app.use(express.json());
 
 //Routes
 app.use('/api/users', require('./routes/userstest.routes'));
+app.use('/api/drones', require('./routes/dronemodel.routes'));
+app.use('/api/sales', require('./routes/sales.routes'));
+app.use('/api/cart', require('./routes/shoppingcart.routes'));
+app.use('/api/custome', require('./routes/customedrone'));
 
 //Static files
 
