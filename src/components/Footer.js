@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import '../styles/navstyle.css';
+import '../styles/footerstyle.css';
 
 class Footer extends Component 
 {
     render(){
         return (
-               
-
-          
+                
             <footer className="page-footer black">
               <div className="container">
                 <div className="row">
