@@ -2,8 +2,9 @@ body{
     background-color: #eaeaea;
 }
 
-#navstyle{
-    
+#containerLoading
+{
+    width: 100%;
 }
 
 #divnav

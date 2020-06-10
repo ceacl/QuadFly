@@ -25,7 +25,7 @@ class Products extends Component {
 
                                     <a className="waves-effect waves-light btn black white-text" id="btn" >COMPRAR</a>
                                     <a className="waves-effect waves-light btn black white-text" id="btn" >VER MÁS</a>
-                                    <a className="waves-effect waves-light btn black white-text" id="btn"><i class="material-icons">add_shopping_cart</i></a>
+                                    <a className="waves-effect waves-light btn black white-text" id="btn"><i className="material-icons">add_shopping_cart</i></a>
 
 
                                 </div>

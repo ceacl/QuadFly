@@ -19,17 +19,17 @@ class Navbar extends Component {
                     </Link>
 
                     <ul className="right  hide-on-med-and-down black-text ">
-                        <li><Link to="/mavicair/1">Mavic Air 2</Link></li>
-                        <li><Link to="/spark/2">Spark</Link></li>
-                        <li><Link to="/phantom/3">Phantom</Link></li>
+                        <li><Link to="/mavic-mavicair">Mavic Air 2</Link></li>
+                        <li><Link to="/spark-spark">Spark</Link></li>
+                        <li><Link to="/phantom-phantom">Phantom</Link></li>
                         <li><Link to="/products">Catalogo</Link></li>
                         <li><Link to="/about-us">Nosotros</Link></li>
                     </ul>
                     <ul className="sidenav" id="menu-responsive">
-                        <li><Link to="/mavicair/1" className="black-text">Mavic Air 2</Link></li>
-                        <li><Link to="/spark/2" className="black-text">Spark</Link></li>
-                        <li><Link to="/phantom/1" className="black-text">Phantom</Link></li>
-                        <li><Link to="/products" className="black-text">Catalogo</Link></li>
+                        <li><Link to="/mavic-mavicair" className="black-text">Mavic Air 2</Link></li>
+                        <li><Link to="/spark-spark" className="black-text">Spark</Link></li>
+                        <li><Link to="/phantom-phantom" className="black-text">Phantom</Link></li>
+                        <li><Link to="/products/" className="black-text">Catalogo</Link></li>
                         <li><Link to="/about-us" className="black-text">Nosotros</Link></li>
                     </ul>
 

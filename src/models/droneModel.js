@@ -4,6 +4,7 @@ const { Schema } = mongoose;
 const DroneModel = new Schema({
 
     name: {type: String, required:true},
+    nickname: {type: String, required:true},
     camera: {type:String, required: true},
     storage: {type: String, required:true},
     batery:{type: String, required:true},
