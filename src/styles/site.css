@@ -1,0 +1,19 @@
+h1{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: red;
+}
+
+h5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h6{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.scroll-box {
+    overflow-y: scroll;
+    height: 100px;
+    padding: 1rem
+}

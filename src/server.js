@@ -20,7 +20,6 @@ app.use('/api/cart', require('./routes/shoppingcart.routes'));
 app.use('/api/custome', require('./routes/customedrone'));
 
 //Static files
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Starting the server
