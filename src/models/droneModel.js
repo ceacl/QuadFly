@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const DroneModel = new Schema({
-
     name: {type: String, required:true},
     nickname: {type: String, required:true},
     camera: {type:String, required: true},
@@ -13,7 +12,8 @@ const DroneModel = new Schema({
     gimbal:{type:String, required:true},
     avoidObstacles:{type:String, required:true},
     description:{type:String},
-    price:{type:String, required:true}
+    price:{type:String, required:true},
+    quantity: {type:String , required:true}
 
 }); 
 

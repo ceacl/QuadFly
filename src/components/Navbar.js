@@ -23,6 +23,7 @@ class Navbar extends Component {
                         <li><Link to="/spark-spark">Spark</Link></li>
                         <li><Link to="/phantom-phantom">Phantom</Link></li>
                         <li><Link to="/products">Catalogo</Link></li>
+                        <li><Link to="/comparator">Comparador</Link></li>
                         <li><Link to="/about-us">Nosotros</Link></li>
                         <li><Link to="/sale">Carrito compras</Link></li>
                     </ul>
@@ -31,6 +32,7 @@ class Navbar extends Component {
                         <li><Link to="/spark-spark" className="black-text">Spark</Link></li>
                         <li><Link to="/phantom-phantom" className="black-text">Phantom</Link></li>
                         <li><Link to="/products/" className="black-text">Catalogo</Link></li>
+                        <li><Link to="/comparator" className="black-text">Comparador</Link></li>
                         <li><Link to="/about-us" className="black-text">Nosotros</Link></li>
                         <li><Link to="/sale" className="black-text">Carrito Compras</Link></li>
                     </ul>

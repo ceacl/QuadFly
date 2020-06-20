@@ -33,6 +33,10 @@ router.put('/:id', async (req, res) =>
     res.json('Update!');
 });
 
+router.put('/updateQuantity/:quantity/:id', async (req, res) => {
+    ShoppingCart.findByIdAndUpdate(req.params.id,{quantity: req.params.quantity}).then(result => res.json(result));
+  });
+
 router.delete('/:id', async (req, res) => 
 {
     await ShoppingCart.findByIdAndRemove(req.params.id);

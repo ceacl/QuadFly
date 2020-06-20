@@ -9,6 +9,7 @@ router.get('/drones',  async (req, res) =>
     res.json(drones);
 });
 
+
 router.get('/:id', async (req, res) => 
 {    
     const drones = await droneModel.findById(req.params.id);
@@ -25,10 +26,10 @@ router.get('/nick/:nickname', async (req, res) =>
 router.post('/', async (req, res) => 
 {
     const {name, nickname, camera, storage, batery, videoTransmission,
-           focusTrack, gimbal, avoidObstacles, description, price} = req.body;
+           focusTrack, gimbal, avoidObstacles, description, price, quantity} = req.body;
            
     const drone = new droneModel ({name, nickname, camera, storage, batery, videoTransmission,
-                                   focusTrack, gimbal, avoidObstacles, description, price});
+                                   focusTrack, gimbal, avoidObstacles, description, price, quantity});
     
     await drone.save();
     res.json({status: 'Drone Saved'});
@@ -37,14 +38,18 @@ router.post('/', async (req, res) =>
 router.put('/:id', async (req, res) => 
 {
     const  {name, nickname, camera, storage, batery, videoTransmission,
-           focusTrack, gimbal, avoidObstacles, description, price} = req.body;
+           focusTrack, gimbal, avoidObstacles, description, price, quantity} = req.body;
 
     const newDrone = {name, nickname, camera, storage, batery, videoTransmission,
-                     focusTrack, gimbal, avoidObstacles, description, price};
+                     focusTrack, gimbal, avoidObstacles, description, price, quantity};
 
     await droneModel.findByIdAndUpdate(req.params.id, newDrone);
     res.json('Drone update!');
 });
+
+router.put('/updateQuantity/:quantity/:id', async (req, res) => {
+    droneModel.findByIdAndUpdate(req.params.id,{quantity: req.params.quantity}).then(result => res.json(result));
+  });
 
 router.delete('/:id', async (req, res) => 
 {

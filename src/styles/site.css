@@ -12,8 +12,7 @@ h6{
     font-weight: bold;
 }
 
-.scroll-box {
-    overflow-y: scroll;
-    height: 100px;
-    padding: 1rem
+li{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
 }

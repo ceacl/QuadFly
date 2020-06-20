@@ -9,6 +9,7 @@ import AboutUs from '../container/AboutUs';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Sales from '../container/Sales';
+import Comparador from '../container/Comparador';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/spark:name" render={props => <DroneDetails {...props} />} />
           <Route exact path="/phantom:name" render={props => <DroneDetails {...props} />} />
           <Route exact path="/sale" component={Sales} />
+          <Route exact path="/comparator" component={Comparador} />
           <Footer />
         </div>
       </div>
