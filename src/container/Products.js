@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
 import mavic2 from '../assets/Image/Home/banner.jpg';
+import Three from '../container/ThreeContainer';
 
 class Products extends Component {
     render() {
+
         return (
+
             <div>
+      
+
                 <div className="container">
 
                     <div className="row">
@@ -26,7 +31,6 @@ class Products extends Component {
                                     <a className="waves-effect waves-light btn black white-text" id="btn" >COMPRAR</a>
                                     <a className="waves-effect waves-light btn black white-text" id="btn" >VER MÁS</a>
                                     <a className="waves-effect waves-light btn black white-text" id="btn"><i className="material-icons">add_shopping_cart</i></a>
-
 
                                 </div>
 

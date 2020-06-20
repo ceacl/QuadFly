@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <style>
+        .btn-open-modal {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+div.explanation {
+  width: 40%;
+  background-color: #F0CC00;
+  padding: 1rem;
+  margin: 2rem auto;
+  font-size: 120%;
+}
+
+.modal-close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 24px;
+  width: 1.5rem;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.42);
+	color: #FFFFF0;
+  text-align: center;
+  line-height: 1.6rem;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="explanation">
+        <p>Upon clicking the button the modal will open, but the height will not be correct. 
+          If the carousel initialization to 'full width' is commented-out and put inside the 
+          'ready' statement for the modal, it works as expected.</p>
+        <p>Note that resizing the window (even if only by opening dev tools) causes the height to 
+          be recalculated and the contents suddenly show.</p>
+      </div>
+      
+      <div class="btn-open-modal">
+        <a class="btn modal-trigger" href="#modal-1">open modal</a>
+      </div>
+      
+      <div class="modal" id="modal-1">
+        <div class="modal-content">
+      
+          <div class="carousel carousel-slider">
+            <a class="carousel-item" href="#one"><img src="https://lorempixel.com/800/400/food/1"></a>
+            <a class="carousel-item" href="#two"><img src="https://lorempixel.com/800/400/food/2"></a>
+            <a class="carousel-item" href="#three"><img src="https://lorempixel.com/800/400/food/3"></a>
+            <a class="carousel-item" href="#four"><img src="https://lorempixel.com/800/400/food/4"></a>
+          </div>
+      
+        </div>
+        <div class="modal-close">X</div>
+      </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script>
+
+$(document).ready(function(){
+  
+  $('#modal1').modal({
+    ready: function() {
+    // $('.carousel.carousel-slider').carousel({fullWidth: true});
+    }
+  });
+  
+  $('.carousel.carousel-slider').carousel({fullWidth: true});
+  
+  });
+    </script> 
+</body>
+</html>

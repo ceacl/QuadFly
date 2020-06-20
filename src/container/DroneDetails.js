@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Loading from '../components/Loading';
+import Three from '../components/ThreeViewer';
 import card4 from '../assets/Image/DroneDetails/mavic_air_2.jpg';
 import video1 from '../assets/Image/DroneDetails/video_mavic.gif';
+
 
 function DroneDetails (props) {
 
@@ -44,7 +46,7 @@ function DroneDetails (props) {
             <div className="container"> 
              
                 <div className="col s12 m12 l12">
-                    <img src={video1} className="responsive-img" alt="" id="bannerMavicAir" width="100%" />
+                    <img src={video1} className="responsive-img" alt="" id="bannerMavicAir" width="100%"/>
                 </div>
 
 
@@ -56,7 +58,7 @@ function DroneDetails (props) {
 
                         <div className="card-content">
                             <span className="card-title activator black-text">{drone['name']}<i className="material-icons right">more_vert</i></span>
-                            <p className="black-text">{drone['description']}</p>
+                         
                         </div>
 
                     </div>
@@ -102,6 +104,7 @@ function DroneDetails (props) {
                     <div className="card-content">
                         <span className="card-title activator black-text">Transimision de video<i className="material-icons right">battery_charging_full</i></span>
                         <p className="black-text">{drone['videoTransmission']}</p>
+                        
                     </div>
 
                 </div>
@@ -143,7 +146,11 @@ function DroneDetails (props) {
                 </div>
 
             
-            
+                <div className="col s12 m12 l12 center-align">
+                    <h4>Modelo 3D </h4>
+                    <Three/>
+                </div>
+
             
             
             
