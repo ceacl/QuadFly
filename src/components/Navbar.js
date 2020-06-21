@@ -25,7 +25,7 @@ class Navbar extends Component {
                         <li><Link to="/products">Catalogo</Link></li>
                         <li><Link to="/comparator">Comparador</Link></li>
                         <li><Link to="/about-us">Nosotros</Link></li>
-                        <li><Link to="/sale">Carrito compras</Link></li>
+                        <li><Link to="/sales">Carrito compras</Link></li>
                     </ul>
                     <ul className="sidenav" id="menu-responsive">
                         <li><Link to="/mavic-mavicair" className="black-text">Mavic Air 2</Link></li>
@@ -34,7 +34,7 @@ class Navbar extends Component {
                         <li><Link to="/products/" className="black-text">Catalogo</Link></li>
                         <li><Link to="/comparator" className="black-text">Comparador</Link></li>
                         <li><Link to="/about-us" className="black-text">Nosotros</Link></li>
-                        <li><Link to="/sale" className="black-text">Carrito Compras</Link></li>
+                        <li><Link to="/sales" className="black-text">Carrito Compras</Link></li>
                     </ul>
 
                 </div>

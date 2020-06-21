@@ -27,8 +27,23 @@ class Sales extends Component {
 
     };
 
-    componentDidUpdate(){
-        
+    componentDidUpdate() {
+        axios.get('/api/cart/cart')
+            .then(response => {
+                this.state.shopping = response.data;
+                this.setState({
+                    shopping: response.data
+                });
+            });
+
+        axios.get('/api/drones/drones')
+            .then(response => {
+                this.state.drones = response.data;
+                this.setState({
+                    drones: response.data
+                });
+            });
+
     }
     componentDidMount() {
 
@@ -47,6 +62,7 @@ class Sales extends Component {
                     drones: response.data
                 });
             });
+       
     }
 
 
@@ -123,14 +139,14 @@ class Sales extends Component {
         this.state.total = subtatal;
     };
     addCart(event) {
-        
-            axios.post('/api/cart/', {
-                userid: this.state.user,
-                productid: this.state.drones[event.target.value]._id,
-                description: this.state.drones[event.target.value].description,
-                quantity: 1
-            });
-        
+
+        axios.post('/api/cart/', {
+            userid: this.state.user,
+            productid: this.state.drones[event.target.value]._id,
+            description: this.state.drones[event.target.value].description,
+            quantity: 1
+        });
+
         window.location.reload(true);
     }
 
@@ -184,7 +200,7 @@ class Sales extends Component {
         var quantity = 0;
         this.state.drones.map((each, key) => {
             this.state.shopping.map((eachC, keyC) => {
-                
+
                 if (each._id == this.state.shopping[keyC].productid) {
                     quantity = 1
                 }

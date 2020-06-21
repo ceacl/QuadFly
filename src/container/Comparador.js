@@ -43,9 +43,7 @@ class Comparator extends Component {
 
 
     };
-    componentDidUpdate() {
-
-    }
+    
     componentDidMount() {
 
         document.getElementById("btnAdd1").style.display = "none";
@@ -101,6 +99,7 @@ class Comparator extends Component {
                     this.state.shopping[keyS].quantity = parseInt(this.state.shopping[keyS].quantity) + 1;
                     this.setState({ shopping: this.state.shopping });
                     axios.put(`/api/cart/updateQuantity/${((this.state.shopping[keyS].quantity))}/${eachS._id}`);
+                    this.props.history.push(`/sales`);
                 }
             });
         } else {
@@ -110,6 +109,7 @@ class Comparator extends Component {
                 description: this.state.drone1[0].description,
                 quantity: 1
             });
+            this.props.history.push(`/sales`);
         }
     }
 
@@ -126,6 +126,7 @@ class Comparator extends Component {
                     this.state.shopping[keyS].quantity = parseInt(this.state.shopping[keyS].quantity) + 1;
                     this.setState({ shopping: this.state.shopping });
                     axios.put(`/api/cart/updateQuantity/${((this.state.shopping[keyS].quantity))}/${eachS._id}`);
+                    this.props.history.push(`/sales`);
                 }
             });
         } else {
@@ -135,6 +136,7 @@ class Comparator extends Component {
                 description: this.state.drone2[0].description,
                 quantity: 1
             });
+            this.props.history.push(`/sales`);
         }
     }
 
