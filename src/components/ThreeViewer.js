@@ -62,10 +62,10 @@ class ThreeViewer extends Component {
 
         const loadDrone = (uri) =>
         {
-            loader.load(uri, (glft) => {
-            const drone = glft.scene.children[0];
+            loader.load(uri, (gl) => {
+            const drone = gl.scene.children[0];
                 drone.scale.set(30,30,30);
-                scene.add(gltf.scene)
+                scene.add(gl.scene)
                 animate();
             });
         }

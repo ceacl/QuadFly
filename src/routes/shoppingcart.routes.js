@@ -18,8 +18,8 @@ router.get('/:id', async (req, res) =>
 
 router.post('/', async (req, res) => 
 {
-    const {userid, productid, description } = req.body;
-    const cart = new ShoppingCart ({userid, productid, description});
+    const {userid, productid, description,quantity } = req.body;
+    const cart = new ShoppingCart ({userid, productid, description,quantity});
     await cart.save();
     res.json({status: 'Saved'});
 });
@@ -27,11 +27,15 @@ router.post('/', async (req, res) =>
 
 router.put('/:id', async (req, res) => 
 {
-    const {userid, productid, description } = req.body;
-    const newCart = new ShoppingCart ({userid, productid, description});
+    const {userid, productid, description,quantity } = req.body;
+    const newCart = new ShoppingCart ({userid, productid, description,quantity});
     await ShoppingCart.findByIdAndUpdate(req.params.id, newCart);
     res.json('Update!');
 });
+
+router.put('/updateQuantity/:quantity/:id', async (req, res) => {
+    ShoppingCart.findByIdAndUpdate(req.params.id,{quantity: req.params.quantity}).then(result => res.json(result));
+  });
 
 router.delete('/:id', async (req, res) => 
 {

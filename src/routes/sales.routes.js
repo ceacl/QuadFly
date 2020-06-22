@@ -16,7 +16,7 @@ router.get('/user/:id', async (req, res) =>
     res.json(sales);
 });
 
-router.post('/', async (req, res) => 
+router.post('/insertSales', async (req, res) => 
 {
     const {userid, productid, description, subtotal, total} = req.body;
     const sale = new Sales ({userid, productid, description, subtotal, total});

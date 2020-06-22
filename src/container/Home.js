@@ -15,15 +15,9 @@ export default class Home extends Component {
                 <div className="col s12 m12 16">
                     <img src={banner} className="responsive-img" alt="" id="bannerHome" />
                 </div>
-
                 <div className="container">
-
                     <div className="row">
-
-
-
                         <div className="col s12 m6 l6">
-
                             <div className="card">
                                 <div className="card-image">
                                     <Link to="about-us" className="waves-effect" href="about_us.html">
@@ -32,22 +26,15 @@ export default class Home extends Component {
                                     </Link>
                                 </div>
                             </div>
-
                         </div>
-
-
                         <div className="col s12 m6 l6">
-
                             <div className="card">
                                 <div className="card-image waves-effect">
                                     <img src={top_right_card1} alt="" />
                                     <span className="card-title">MAVIC AIR 2</span>
                                 </div>
                             </div>
-
                         </div>
-
-
                         <div className="col s12 m6 l6">
 
                             <div className="card">
