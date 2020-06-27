@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Loading from '../components/Loading';
 import Three from '../components/ThreeViewer';
-import card4 from '../assets/Image/DroneDetails/mavic_air_2.jpg';
-import video1 from '../assets/Image/DroneDetails/video_mavic.gif';
-import imgspark from '../public/imgs/spark/spark11.jpg';
 
 function DroneDetails (props) {
 
@@ -17,8 +14,6 @@ function DroneDetails (props) {
         {
 
             let droneMedia;
-
-            console.log("hola");
             
             if(droneNick === "spark")
             {
@@ -32,7 +27,7 @@ function DroneDetails (props) {
                     transmision: "imgs/spark/transmision.jpg",
                     droneVideo: 'imgs/spark/spark_video.gif' 
                 };
-                console.log("spark");
+             
                 return droneMedia;
 
             }
@@ -49,7 +44,7 @@ function DroneDetails (props) {
                     transmision: "imgs/mavic/transmision.jpg",
                     droneVideo: 'imgs/mavic/video_mavic.gif' 
                 };
-                console.log("mavic");
+           
                 return droneMedia;
             }
 
@@ -65,7 +60,6 @@ function DroneDetails (props) {
                     transmision: "imgs/phantom/transmision.jpg",
                     droneVideo: 'imgs/phantom/video_phantom.gif' 
                 };
-                console.log("phantom");
                 return droneMedia;
             }
 
@@ -78,14 +72,13 @@ function DroneDetails (props) {
                     camara: 'imgs/yuneec/camara.jpg',
                     precio: 'imgs/yuneec/precio.jpg',
                     droneImg: 'imgs/yuneec/yuneec_mantis_g.jpg',
-                    transmision: "imgs/yuneec/transmición.jpg",
+                    transmision: "imgs/yuneec/transmicion.jpg",
                     droneVideo: 'imgs/yuneec/yuneec_video.gif' 
                 };
-                console.log("yunnec");
+
                 return droneMedia;
             }
 
-            console.log("fin");
        
         }
 
@@ -109,7 +102,6 @@ function DroneDetails (props) {
             
             const timeId = setInterval(() => {
                 loadDroneDetails();
-                console.log("print");
                 
             }, 5000);
             
@@ -119,7 +111,6 @@ function DroneDetails (props) {
         useEffect(() => {
             let dm = loadDroneMedia(nick[1]);
             setDroneMedia(dm);
-            console.log(dm);
         },[]);
 
         return (
