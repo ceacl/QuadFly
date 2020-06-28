@@ -27,9 +27,6 @@ class Sales extends Component {
 
     };
 
-    componentDidUpdate(){
-        
-    }
     componentDidMount() {
 
         axios.get('/api/cart/cart')
@@ -47,6 +44,7 @@ class Sales extends Component {
                     drones: response.data
                 });
             });
+       
     }
 
 
@@ -94,7 +92,6 @@ class Sales extends Component {
                 }
             }
         });
-
     };
 
     delete(event) {
@@ -123,14 +120,14 @@ class Sales extends Component {
         this.state.total = subtatal;
     };
     addCart(event) {
-        
-            axios.post('/api/cart/', {
-                userid: this.state.user,
-                productid: this.state.drones[event.target.value]._id,
-                description: this.state.drones[event.target.value].description,
-                quantity: 1
-            });
-        
+
+        axios.post('/api/cart/', {
+            userid: this.state.user,
+            productid: this.state.drones[event.target.value]._id,
+            description: this.state.drones[event.target.value].description,
+            quantity: 1
+        });
+
         window.location.reload(true);
     }
 
@@ -184,7 +181,7 @@ class Sales extends Component {
         var quantity = 0;
         this.state.drones.map((each, key) => {
             this.state.shopping.map((eachC, keyC) => {
-                
+
                 if (each._id == this.state.shopping[keyC].productid) {
                     quantity = 1
                 }
@@ -220,12 +217,12 @@ class Sales extends Component {
                     <div className="container">
                         <h3>Carrito de compras</h3>
                         <div className="row">
-                            <div className="col s12 m8 l8">
+                            <div className="col s12 m7 l8">
                                 <div>{this.createTable()}</div>
                                 <br />
                                 <br />
                             </div>
-                            <div className="col s12 m4 l4">
+                            <div className="col s12 m5 l4">
 
                                 <div className="card center-align">
                                     <h5 className="center-align">Precio total:</h5>

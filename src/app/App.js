@@ -25,7 +25,7 @@ function App() {
           <Route exact path="/spark:name" render={props => <DroneDetails {...props} />} />
           <Route exact path="/phantom:name" render={props => <DroneDetails {...props} />} />
           <Route exact path="/yuneec:name" render={props => <DroneDetails {...props} />} />
-          <Route exact path="/sale" component={Sales} />
+          <Route exact path="/sales" component={Sales} />
           <Route exact path="/comparator" component={Comparador} />
           <Footer />
         </div>

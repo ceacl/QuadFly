@@ -9,26 +9,28 @@ class Comparator extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            drone1: [{camera: "N/A",
-                      batery: "N/A",
-                      storage: "N/A",
-                      videoTransmission: "N/A",
-                      focusTrack: "N/A",
-                      gimbal: "N/A",
-                      avoidObstacles: "N/A",
-                      description: "N/A",
-                      price: "0",
-                    }],
-            drone2: [{camera: "N/A",
-                      batery: "N/A",
-                      storage: "N/A",
-                      videoTransmission: "N/A",
-                      focusTrack: "N/A",
-                      gimbal: "N/A",
-                      avoidObstacles: "N/A",
-                      description: "N/A",
-                      price: "0",
-                    }],
+            drone1: [{
+                camera: "N/A",
+                batery: "N/A",
+                storage: "N/A",
+                videoTransmission: "N/A",
+                focusTrack: "N/A",
+                gimbal: "N/A",
+                avoidObstacles: "N/A",
+                description: "N/A",
+                price: "0",
+            }],
+            drone2: [{
+                camera: "N/A",
+                batery: "N/A",
+                storage: "N/A",
+                videoTransmission: "N/A",
+                focusTrack: "N/A",
+                gimbal: "N/A",
+                avoidObstacles: "N/A",
+                description: "N/A",
+                price: "0",
+            }],
             user: '5eead62677edc915e83e5022',
             drones: [{}],
             users: [{}],
@@ -43,9 +45,7 @@ class Comparator extends Component {
 
 
     };
-    componentDidUpdate() {
 
-    }
     componentDidMount() {
 
         document.getElementById("btnAdd1").style.display = "none";
@@ -101,6 +101,7 @@ class Comparator extends Component {
                     this.state.shopping[keyS].quantity = parseInt(this.state.shopping[keyS].quantity) + 1;
                     this.setState({ shopping: this.state.shopping });
                     axios.put(`/api/cart/updateQuantity/${((this.state.shopping[keyS].quantity))}/${eachS._id}`);
+                    this.props.history.push(`/sales`);
                 }
             });
         } else {
@@ -110,6 +111,7 @@ class Comparator extends Component {
                 description: this.state.drone1[0].description,
                 quantity: 1
             });
+            this.props.history.push(`/sales`);
         }
     }
 
@@ -126,6 +128,7 @@ class Comparator extends Component {
                     this.state.shopping[keyS].quantity = parseInt(this.state.shopping[keyS].quantity) + 1;
                     this.setState({ shopping: this.state.shopping });
                     axios.put(`/api/cart/updateQuantity/${((this.state.shopping[keyS].quantity))}/${eachS._id}`);
+                    this.props.history.push(`/sales`);
                 }
             });
         } else {
@@ -135,6 +138,7 @@ class Comparator extends Component {
                 description: this.state.drone2[0].description,
                 quantity: 1
             });
+            this.props.history.push(`/sales`);
         }
     }
 
@@ -186,13 +190,15 @@ class Comparator extends Component {
                             <div className="col s12 m12 l12">
 
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone1[0].camera}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone1[0].camera}</p>
                                 </div>
                                 <div className="col s2 m2 l2 center-align">
-                                    <p className="card-title center-align"><i className="material-icons medium">photo_camera</i></p>
+                                    <p className="card-title center-align">Cámara</p>
+                                    <i className="material-icons medium" >photo_camera</i>
+
                                 </div>
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone2[0].camera}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone2[0].camera}</p>
                                 </div>
                             </div>
                         </div>
@@ -200,13 +206,14 @@ class Comparator extends Component {
                         <div className="row">
                             <div className="col s12 m12 l12">
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone1[0].batery}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone1[0].batery}</p>
                                 </div>
                                 <div className="col s2 m2 l2 center-align">
-                                    <p className="card-title activator"><i className="material-icons medium">battery_charging_full</i></p>
+                                    <p className="card-title center-align">Batería</p>
+                                    <i className="material-icons medium">battery_charging_full</i>
                                 </div>
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone2[0].batery}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone2[0].batery}</p>
                                 </div>
                             </div>
                         </div>
@@ -214,13 +221,14 @@ class Comparator extends Component {
                         <div className="row">
                             <div className="col s12 m12 l12">
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone1[0].storage}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone1[0].storage}</p>
                                 </div>
                                 <div className="col s2 m2 l2 center-align">
-                                    <p><i className="material-icons medium">sd_storage</i></p>
+                                    <p className="card-title center-align">Memoria</p>
+                                    <i className="material-icons medium">sd_storage</i>
                                 </div>
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone2[0].storage}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone2[0].storage}</p>
                                 </div>
                             </div>
                         </div>
@@ -228,13 +236,14 @@ class Comparator extends Component {
                         <div className="row">
                             <div className="col s12 m12 l12">
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone1[0].videoTransmission}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone1[0].videoTransmission}</p>
                                 </div>
                                 <div className="col s2 m2 l2 center-align">
-                                    <p className="card-title activator"><i className="material-icons medium">videocam</i></p>
+                                    <p className="card-title center-align">Video</p>
+                                    <i className="material-icons medium">videocam</i>
                                 </div>
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone2[0].videoTransmission}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone2[0].videoTransmission}</p>
                                 </div>
                             </div>
                         </div>
@@ -243,13 +252,14 @@ class Comparator extends Component {
                             <div className="col s12 m12 l12">
 
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone1[0].focusTrack}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone1[0].focusTrack}</p>
                                 </div>
                                 <div className="col s2 m2 l2 center-align">
-                                    <p className="card-title activator"><i className="material-icons medium">center_focus_strong</i></p>
+                                    <p className="card-title center-align">Enfoque</p>
+                                    <i className="material-icons medium">center_focus_strong</i>
                                 </div>
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone2[0].focusTrack}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone2[0].focusTrack}</p>
                                 </div>
                             </div>
                         </div>
@@ -257,13 +267,14 @@ class Comparator extends Component {
                         <div className="row">
                             <div className="col s12 m12 l12">
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone1[0].gimbal}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone1[0].gimbal}</p>
                                 </div>
                                 <div className="col s2 m2 l2 center-align">
-                                    <p className="card-title activator"><i className="material-icons medium">flight</i></p>
+                                    <p className="card-title center-align">Estabilidad</p>
+                                    <i className="material-icons medium">flight</i>
                                 </div>
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone2[0].gimbal}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone2[0].gimbal}</p>
                                 </div>
                             </div>
                         </div>
@@ -271,13 +282,14 @@ class Comparator extends Component {
                         <div className="row">
                             <div className="col s12 m12 l12">
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone1[0].avoidObstacles}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone1[0].avoidObstacles}</p>
                                 </div>
                                 <div className="col s2 m2 l2 center-align">
-                                    <p className="card-title activator"><i className="material-icons medium">alt_route</i></p>
+                                    <p className="card-title center-align">Esquiva Obstáculos</p>
+                                    <i className="material-icons medium">alt_route</i>
                                 </div>
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone2[0].avoidObstacles}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone2[0].avoidObstacles}</p>
                                 </div>
                             </div>
                         </div>
@@ -285,13 +297,14 @@ class Comparator extends Component {
                         <div className="row">
                             <div className="col s12 m12 l12">
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone1[0].description}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone1[0].description}</p>
                                 </div>
                                 <div className="col s2 m2 l2 center-align">
-                                    <p className="card-title activator medium"><i className="material-icons medium">description</i></p>
+                                    <p className="card-title center-align">Descripción</p>
+                                    <i className="material-icons medium">description</i>
                                 </div>
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>{this.state.drone2[0].description}</p>
+                                    <p style={{ paddingTop: 60 }}>{this.state.drone2[0].description}</p>
                                 </div>
                             </div>
                         </div>
@@ -299,13 +312,14 @@ class Comparator extends Component {
                         <div className="row">
                             <div className="col s12 m12 l12">
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>${this.state.drone1[0].price}</p>
+                                    <p style={{ paddingTop: 60 }}>${this.state.drone1[0].price}</p>
                                 </div>
                                 <div className="col s2 m2 l2 center-align">
-                                    <p className="card-title activator"><i className="material-icons medium">attach_money</i></p>
+                                    <p className="card-title center-align">Precio</p>
+                                    <i className="material-icons medium">attach_money</i>
                                 </div>
                                 <div className="col s5 m5 l5 center-align">
-                                    <p style={{ paddingTop: 30 }}>${this.state.drone2[0].price}</p>
+                                    <p style={{ paddingTop: 60 }}>${this.state.drone2[0].price}</p>
                                 </div>
                             </div>
                         </div>
