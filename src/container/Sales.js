@@ -27,24 +27,6 @@ class Sales extends Component {
 
     };
 
-    componentDidUpdate() {
-        axios.get('/api/cart/cart')
-            .then(response => {
-                this.state.shopping = response.data;
-                this.setState({
-                    shopping: response.data
-                });
-            });
-
-        axios.get('/api/drones/drones')
-            .then(response => {
-                this.state.drones = response.data;
-                this.setState({
-                    drones: response.data
-                });
-            });
-
-    }
     componentDidMount() {
 
         axios.get('/api/cart/cart')
@@ -110,7 +92,6 @@ class Sales extends Component {
                 }
             }
         });
-
     };
 
     delete(event) {
@@ -236,12 +217,12 @@ class Sales extends Component {
                     <div className="container">
                         <h3>Carrito de compras</h3>
                         <div className="row">
-                            <div className="col s12 m8 l8">
+                            <div className="col s12 m7 l8">
                                 <div>{this.createTable()}</div>
                                 <br />
                                 <br />
                             </div>
-                            <div className="col s12 m4 l4">
+                            <div className="col s12 m5 l4">
 
                                 <div className="card center-align">
                                     <h5 className="center-align">Precio total:</h5>
