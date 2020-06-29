@@ -27,7 +27,7 @@ class Navbar extends Component {
                         <li><Link to="/comparator">Comparador</Link></li>
                         <li><Link to="/about-us">Nosotros</Link></li>
                         <li ><Link to="/sales" >
-                            <img className="responsive-img" src={cart} alt="" width="50%" height="50%" />
+                            <img className="responsive-img" style={{ marginTop:15 }} src={cart} alt="" width="50%" height="50%" />
                         </Link></li>
                     </ul>
                     <ul className="sidenav" id="menu-responsive">

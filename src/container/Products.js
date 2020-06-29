@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import mavic2 from '../assets/Image/Home/banner.jpg';
+import mavic from '../public/imgs/Comparador y Carrito/mavic air 2.jpg';
+import phantom from '../public/imgs/Comparador y Carrito/phantom.jpg';
+import spark from '../public/imgs/Comparador y Carrito/spark.jpg';
+import yuunec from '../public/imgs/Comparador y Carrito/yuunec.jpg';
 
 class Products extends Component {
 
@@ -79,45 +83,40 @@ class Products extends Component {
         var values = "";
         this.state.drones.map((each, key) => {
             values = key;
-            if (key % 2) {
-                tempArray.push(
-                    <div className="row">
-                        <div className="col s12 m12 l12">
-                            <div className="card horizontal">
-                                <div className="card-image waves-effect">
-                                    <img src={mavic2} />
-                                </div>
-                                <div className="card-content">
-                                    <span className="card-title activator black-text">{each.name}</span>
-                                    <p className="black-text">{each.description}</p>
-                                    <a className="waves-effect waves-light btn black white-text" id="btn" >COMPRAR</a>
-                                    <a className="waves-effect waves-light btn black white-text" id="btn" >VER MÁS</a>
-                                    <li className="waves-effect waves-light btn black white-text" id="btn" value={values} onClick={this.addCart}>Añadir al carrito</li>
-                                </div>
+            tempArray.push(
+                <div className="row">
+                    <div className="col s12 m12 l12">
+                        <div className="card horizontal ">
+                            <div className="col s6 m6 l6 card-image waves-effect">
+                                {each.nickname == "spark" &&
+                                    <img src={spark} style={{ marginLeft: 60 }} width="900px" height="300px" />
+                                }
+                                {each.nickname == "mavicair" &&
+                                    <img src={mavic} style={{ marginLeft: 60 }} width="900px" height="300px" />
+                                }
+                                {each.nickname == "phantom" &&
+                                    <img src={phantom} style={{ marginLeft: 60 }} width="900px" height="300px" />
+                                }
+                                {each.nickname == "yuneec" &&
+                                    <img src={yuunec} style={{ marginLeft: 60 }} width="900px" height="300px" />
+                                }
+                            </div>
+                            <div className="col s6 m6 l6 card-content">
+                                <br />
+                                <span className="card-title activator black-text center-align">{each.name}</span>
+                                <br />
+                                <p className="black-text">{each.description}</p>
+                                <br />
+                                <br />
+                                <a className="waves-effect waves-light btn black white-text" id="btn" >COMPRAR</a>
+                                <a className="waves-effect waves-light btn black white-text" id="btn" >VER MÁS</a>
+                                <li className="waves-effect waves-light btn black white-text" id="btn" value={values} onClick={this.addCart}>Añadir al carrito</li>
                             </div>
                         </div>
                     </div>
-                );
-            } else {
-                tempArray.push(
-                    <div className="row">
-                        <div className="col s12 m12 l12">
-                            <div className="card horizontal black white-text">
-                                <div className="card-image waves-effect">
-                                    <img src={mavic2} />
-                                </div>
-                                <div className="card-content">
-<span className="card-title activator white-text">{each.name}</span>
-                                    <p className="black-text white-text">{each.description}</p>
-                                    <a className="waves-effect waves-light btn white black-text" id="btn" >COMPRAR</a>
-                                    <a className="waves-effect waves-light btn white black-text" id="btn" >VER MÁS</a>
-                                                                        <li className="waves-effect waves-light btn white black-text" id="btn" value={values} onClick={this.addCart}>Añadir al carrito</li>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                );
-            }
+                </div>
+            );
+
         });
 
         return tempArray;

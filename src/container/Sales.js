@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import mavic2 from '../assets/Image/Home/banner.jpg';
 import top_right_card2 from '../assets/Image/DroneDetails/mavic mini.png';
+import mavic from '../public/imgs/Comparador y Carrito/mavic air 2.jpg';
+import phantom from '../public/imgs/Comparador y Carrito/phantom.jpg';
+import spark from '../public/imgs/Comparador y Carrito/spark.jpg';
+import yuunec from '../public/imgs/Comparador y Carrito/yuunec.jpg';
 
 class Sales extends Component {
 
@@ -44,7 +48,7 @@ class Sales extends Component {
                     drones: response.data
                 });
             });
-       
+
     }
 
 
@@ -141,9 +145,20 @@ class Sales extends Component {
                 values = keyC;
                 if (each._id == this.state.shopping[keyC].productid) {
                     tempArray.push(
-                        <div className="card horizontal">
+                        <div className="card horizontal ">
                             <div className="col s6 m6 l4">
-                                <img src={top_right_card2} width="100%" height="100%" />
+                                {each.nickname == "spark" &&
+                                    <img src={spark} width="100%" height="100%" />
+                                }
+                                {each.nickname == "mavicair" &&
+                                    <img src={mavic} width="100%" height="100%" />
+                                }
+                                {each.nickname == "phantom" &&
+                                    <img src={phantom} width="100%" height="100%" />
+                                }
+                                {each.nickname == "yuneec" &&
+                                    <img src={yuunec} width="100%" height="100%" />
+                                }
                             </div>
                             <div class="card-stacked col s6 m6 l12">
                                 <div className="card-content s6 m6 l12">
@@ -192,7 +207,18 @@ class Sales extends Component {
                     <div className="row">
                         <div className="card horizontal">
                             <div className="col s6 m4 l4">
-                                <img src={top_right_card2} width="100%" height="100%" />
+                                {each.nickname == "spark" &&
+                                    <img src={spark} width="120px" height="120px" style={{ marginTop:30 }} />
+                                }
+                                {each.nickname == "mavicair" &&
+                                    <img src={mavic} width="120px" height="120px" style={{ marginTop:30 }}/>
+                                }
+                                {each.nickname == "phantom" &&
+                                    <img src={phantom} width="120px" height="120px" style={{ marginTop:30 }} />
+                                }
+                                {each.nickname == "yuneec" &&
+                                    <img src={yuunec} width="120px" height="120px" style={{ marginTop:30 }} />
+                                }
                             </div>
                             <div class="card-stacked col s6 m8 l2">
                                 <div className="card-content s6 m6 l8">

@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import Select from "react-select";
 import axios from 'axios';
-import mavic2 from '../assets/Image/Home/banner.jpg';
-import top_right_card2 from '../assets/Image/DroneDetails/mavic mini.png'; 
+import mavic from '../public/imgs/Comparador y Carrito/mavic air 2.jpg';
+import phantom from '../public/imgs/Comparador y Carrito/phantom.jpg';
+import spark from '../public/imgs/Comparador y Carrito/spark.jpg';
+import yuunec from '../public/imgs/Comparador y Carrito/yuunec.jpg';
+import icon from "../assets/Image/Icons/white_logo.png";
+import parallax4 from '../assets/Image/AboutUs/parallax4.jpg';
 
 
 class Comparator extends Component {
@@ -35,6 +39,7 @@ class Comparator extends Component {
             drones: [{}],
             users: [{}],
             shopping: [{}],
+            name:""
 
         };
 
@@ -50,6 +55,9 @@ class Comparator extends Component {
 
         document.getElementById("btnAdd1").style.display = "none";
         document.getElementById("btnAdd2").style.display = "none";
+        document.getElementById("droneImg1").style.display = "none";
+        document.getElementById("droneImg2").style.display = "none";
+
 
         axios.get('/api/cart/cart')
             .then(response => {
@@ -66,27 +74,66 @@ class Comparator extends Component {
                     drones: response.data
                 });
             });
+
+           
+
     }
 
     droneSelector1(event) {
         document.getElementById("btnAdd1").style.display = "block";
+        document.getElementById("droneImg1").style.display = "block";
+        
+
         axios.get('/api/drones/nick/' + event.value).then(response => {
+           
             this.state.drone1 = response.data;
             this.setState({
                 drone1: response.data
             });
+            this.state.name = this.state.drone1[0].name;
+            this.setState({name: this.state.drone1[0].name});
+
         });
+
+        if ("spark" == event.value) {
+            document.getElementById("droneImg1").src = spark;
+        }
+        if ("mavicair" == event.value) {
+            document.getElementById("droneImg1").src = mavic;
+        }
+        if ("phantom" == event.value) {
+            document.getElementById("droneImg1").src = phantom;
+        }
+        if ("yuneec" == event.value) {
+            document.getElementById("droneImg1").src = yuunec;
+        }
+
     }
 
     droneSelector2(event) {
         document.getElementById("btnAdd2").style.display = "block";
+        document.getElementById("droneImg2").style.display = "block";
         axios.get('/api/drones/nick/' + event.value).then(response => {
             this.state.drone2 = response.data;
             this.setState({
                 drone2: response.data
             });
         });
+
+        if ("spark" == event.value) {
+            document.getElementById("droneImg2").src = spark;
+        }
+        if ("mavicair" == event.value) {
+            document.getElementById("droneImg2").src = mavic;
+        }
+        if ("phantom" == event.value) {
+            document.getElementById("droneImg2").src = phantom;
+        }
+        if ("yuneec" == event.value) {
+            document.getElementById("droneImg2").src = yuunec;
+        }
     }
+
 
     addCart1() {
         var quantity = 0;
@@ -163,7 +210,7 @@ class Comparator extends Component {
                                         })}
                                     />
                                     <br />
-                                    <img className="card-panel" src={top_right_card2} width="100%" height="100%" />
+                                    <img className="card-panel" id="droneImg1" width="100%" height="100%" />
                                 </div>
                                 <div className="col s2 m2 l2 center-align">
 
@@ -180,7 +227,7 @@ class Comparator extends Component {
                                         })}
                                     />
                                     <br />
-                                    <img className="card-panel" src={top_right_card2} width="100%" height="100%" />
+                                    <img className="card-panel" id="droneImg2" width="100%" height="100%" />
                                 </div>
                             </div>
                         </div>

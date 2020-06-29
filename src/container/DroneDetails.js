@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Loading from '../components/Loading';
-import Three from '../components/ThreeViewer';
+//import Three from '../components/ThreeViewer';
 
 function DroneDetails (props) {
 
