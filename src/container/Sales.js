@@ -167,9 +167,9 @@ class Sales extends Component {
                                     </div>
                                     <div className="row">
                                         <div className="col s12 m12 l4">
-                                            <li className="col s4 m4 l4 waves-effect waves-light center-align" id="btnAdd" value={values} onClick={this.increment}>+</li>
-                                            <input type="text" id="txtquantity" className="col s3 m4 l4 center-align" value={eachC.quantity} onChange={this.changeValue} />
                                             <li className="col s4 m4 l4 waves-effect waves-light center-align" id="btnRemove" value={values} onClick={this.decrement}>-</li>
+                                            <input type="text" id="txtquantity" className="col s3 m4 l4 center-align" value={eachC.quantity} onChange={this.changeValue} />
+                                            <li className="col s4 m4 l4 waves-effect waves-light center-align" id="btnAdd" value={values} onClick={this.increment}>+</li>
                                         </div>
                                         <div className="col s12 m12 l4 center-align" >
                                             <li className="waves-effect waves-light btn" value={values} onClick={this.delete}>Eliminar</li>
@@ -208,16 +208,16 @@ class Sales extends Component {
                         <div className="card horizontal">
                             <div className="col s6 m4 l4">
                                 {each.nickname == "spark" &&
-                                    <img src={spark} width="120px" height="120px" style={{ marginTop:30 }} />
+                                    <img src={spark} width="120px" height="120px" style={{ marginTop: 30 }} />
                                 }
                                 {each.nickname == "mavicair" &&
-                                    <img src={mavic} width="120px" height="120px" style={{ marginTop:30 }}/>
+                                    <img src={mavic} width="120px" height="120px" style={{ marginTop: 30 }} />
                                 }
                                 {each.nickname == "phantom" &&
-                                    <img src={phantom} width="120px" height="120px" style={{ marginTop:30 }} />
+                                    <img src={phantom} width="120px" height="120px" style={{ marginTop: 30 }} />
                                 }
                                 {each.nickname == "yuneec" &&
-                                    <img src={yuunec} width="120px" height="120px" style={{ marginTop:30 }} />
+                                    <img src={yuunec} width="120px" height="120px" style={{ marginTop: 30 }} />
                                 }
                             </div>
                             <div class="card-stacked col s6 m8 l2">

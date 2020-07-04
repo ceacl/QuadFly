@@ -30,8 +30,10 @@ export default class Home extends Component {
                         <div className="col s12 m6 l6">
                             <div className="card">
                                 <div className="card-image waves-effect">
-                                    <img src={top_right_card1} alt="" />
-                                    <span className="card-title">MAVIC AIR 2</span>
+                                    <Link to="mavic-mavicair" className="waves-effect">
+                                        <img src={top_right_card1} alt="" />
+                                        <span className="card-title">MAVIC AIR 2</span>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -39,8 +41,10 @@ export default class Home extends Component {
 
                             <div className="card">
                                 <div className="card-image waves-effect">
-                                    <img src={top_right_card2} alt="" />
-                                    <span className="card-title">Capta increíbles escenas.</span>
+                                    <Link to="spark-spark" className="waves-effect">
+                                        <img src={top_right_card2} alt="" />
+                                        <span className="card-title">Capta increíbles escenas con el Spark.</span>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -51,8 +55,10 @@ export default class Home extends Component {
 
                             <div className="card">
                                 <div className="card-image waves-effect">
-                                    <img src={bottom_card} alt="" />
-                                    <span className="card-title">Descubre nuestro catálogo.</span>
+                                    <Link to="products" className="waves-effect">
+                                        <img src={bottom_card} alt="" />
+                                        <span className="card-title">Descubre nuestro catálogo.</span>
+                                    </Link>
                                 </div>
                             </div>
 

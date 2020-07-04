@@ -15,16 +15,16 @@ class Footer extends Component
                   </div>
 
                   <div className="col s3">
-                    <li><a className="grey-text text-lighten-3" href="about_us.html">Contact</a></li>
+                    <li><a className="grey-text text-lighten-3" href="#/about-us">Contacto</a></li>
                   </div>
                   <div className="col s3">
-                    <li><a className="grey-text text-lighten-3" href="#!">Privacy & Legal</a></li>
+                    <li><a className="grey-text text-lighten-3" href="#!">Privacidad</a></li>
                   </div>
                   <div className="col s3">
-                    <li><a className="grey-text text-lighten-3" href="#!">Community</a></li>
+                    <li><a className="grey-text text-lighten-3" href="#!">Comunidad</a></li>
                   </div>
                   <div className="col s3">
-                    <li><a className="grey-text text-lighten-3" href="#!">Work Team</a></li>
+                    <li><a className="grey-text text-lighten-3" href="#!">Equipo de trabajo</a></li>
                   </div>
                 </div>
               </div>
