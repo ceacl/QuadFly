@@ -16,6 +16,12 @@ router.get('/:id', async (req, res) =>
     res.json(cart);
 });
 
+router.get('/cart/:userid', async (req, res) => 
+{    
+    const cart = await ShoppingCart.find({'userid':req.params.userid});
+    res.json(cart);
+});
+
 router.post('/', async (req, res) => 
 {
     const {userid, productid, description,quantity } = req.body;
