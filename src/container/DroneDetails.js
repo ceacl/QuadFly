@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Loading from '../components/Loading';
+import BuyButton from '../components/BuyButton';
 //import Three from '../components/ThreeViewer';
 
 function DroneDetails (props) {
@@ -19,13 +20,13 @@ function DroneDetails (props) {
             {
                 droneMedia = 
                 {
-                    almacenamiento: 'imgs/spark/almacenamiento.jpg',
-                    bateria: 'imgs/spark/bateria.jpg',
-                    camara: 'imgs/spark/cámara.jpg',
-                    precio: 'imgs/spark/precio.jpg',
-                    droneImg: 'imgs/spark/spark11.jpg',
-                    transmision: "imgs/spark/transmision.jpg",
-                    droneVideo: 'imgs/spark/spark_video.gif' 
+                    almacenamiento: 'imgs/spark_almacenamiento.jpg',
+                    bateria: 'imgs/spark_bateria.jpg',
+                    camara: 'imgs/spark_cámara.jpg',
+                    precio: 'imgs/spark_precio.jpg',
+                    droneImg: 'imgs/spark11.jpg',
+                    transmision: "imgs/spark_transmision.jpg",
+                    droneVideo: 'imgs/spark_spark_video.gif' 
                 };
              
                 return droneMedia;
@@ -36,13 +37,13 @@ function DroneDetails (props) {
             {
                 droneMedia = 
                 {
-                    almacenamiento: 'imgs/mavic/almacenamiento.jpg',
-                    bateria: 'imgs/mavic/bateria.jpg',
-                    camara: 'imgs/mavic/cámara.jpg',
-                    precio: 'imgs/mavic/precio.jpg',
-                    droneImg: 'imgs/mavic/mavic.jpg',
-                    transmision: "imgs/mavic/transmision.jpg",
-                    droneVideo: 'imgs/mavic/video_mavic.gif' 
+                    almacenamiento: 'imgs/mavic_almacenamiento.jpg',
+                    bateria: 'imgs/mavic_bateria.jpg',
+                    camara: 'imgs/mavic_cámara.jpg',
+                    precio: 'imgs/mavic_precio.jpg',
+                    droneImg: 'imgs/mavic_mavic.jpg',
+                    transmision: "imgs/mavic_transmision.jpg",
+                    droneVideo: 'imgs/mavic_video_mavic.gif' 
                 };
            
                 return droneMedia;
@@ -52,13 +53,13 @@ function DroneDetails (props) {
             {
                 droneMedia = 
                 {
-                    almacenamiento: 'imgs/phantom/almacenamiento.jpg',
-                    bateria: 'imgs/phantom/bateria.jpg',
-                    camara: 'imgs/phantom/camara.jpg',
-                    precio: 'imgs/phantom/precio.jpg',
-                    droneImg: 'imgs/phantom/phantom.jpg',
-                    transmision: "imgs/phantom/transmision.jpg",
-                    droneVideo: 'imgs/phantom/video_phantom.gif' 
+                    almacenamiento: 'imgs/phantom_almacenamiento.jpg',
+                    bateria: 'imgs/phantom_bateria.jpg',
+                    camara: 'imgs/phantom_camara.jpg',
+                    precio: 'imgs/phantom_precio.jpg',
+                    droneImg: 'imgs/phantom_phantom.jpg',
+                    transmision: "imgs/phantom_transmision.jpg",
+                    droneVideo: 'imgs/phantom_video_phantom.gif' 
                 };
                 return droneMedia;
             }
@@ -67,13 +68,13 @@ function DroneDetails (props) {
             {
                 droneMedia = 
                 {
-                    almacenamiento: 'imgs/yuneec/almacenamiento.jpg',
-                    bateria: 'imgs/yuneec/bateria.jpg',
-                    camara: 'imgs/yuneec/camara.jpg',
-                    precio: 'imgs/yuneec/precio.jpg',
-                    droneImg: 'imgs/yuneec/yuneec_mantis_g.jpg',
-                    transmision: "imgs/yuneec/transmicion.jpg",
-                    droneVideo: 'imgs/yuneec/yuneec_video.gif' 
+                    almacenamiento: 'imgs/yuneec_almacenamiento.jpg',
+                    bateria: 'imgs/yuneec_bateria.jpg',
+                    camara: 'imgs/yuneec_camara.jpg',
+                    precio: 'imgs/yuneec_precio.jpg',
+                    droneImg: 'imgs/yuneec_mantis_g.jpg',
+                    transmision: "imgs/yuneec_transmicion.jpg",
+                    droneVideo: 'imgs/yuneec_video.gif' 
                 };
 
                 return droneMedia;
@@ -106,7 +107,7 @@ function DroneDetails (props) {
             }, 5000);
             
             return () => clearInterval(timeId)          
-        });
+        }, []);
 
         useEffect(() => {
             let dm = loadDroneMedia(nick[1]);
@@ -260,6 +261,10 @@ function DroneDetails (props) {
                         <div className="card-content">
                             <span className="card-title activator grey-text text-darken-4">Precio</span>
                             <span className="card-title activator grey-text text-darken-4">${drone['price']}</span>
+                            <BuyButton _id={drone['_id']} isAddOrBuy="add"/>
+                            <BuyButton _id={drone['_id']} isAddOrBuy="buy"/>
+                            
+
                         </div>
 
                     </div>
