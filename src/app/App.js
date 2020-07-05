@@ -10,6 +10,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Sales from '../container/Sales';
 import Comparador from '../container/Comparador';
+import WorkTeam from '../container/WorkTeam';
+import Privacy from '../container/Privacy';
 
 function App() {
 
@@ -27,6 +29,8 @@ function App() {
           <Route exact path="/yuneec:name" render={props => <DroneDetails {...props} />} />
           <Route exact path="/sales" component={Sales} />
           <Route exact path="/comparator" component={Comparador} />
+          <Route exact path="/workteam" component={WorkTeam} />
+          <Route exact path="/privacy" component={Privacy} />
           <Footer />
         </div>
       </div>

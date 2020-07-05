@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 import mavic2 from '../assets/Image/Home/banner.jpg';
 import mavic from '../public/imgs/Comparador y Carrito/mavic air 2.jpg';
@@ -109,7 +110,7 @@ class Products extends Component {
                                 <br />
                                 <br />
                                 <a className="waves-effect waves-light btn black white-text" id="btn" >COMPRAR</a>
-                                <a className="waves-effect waves-light btn black white-text" id="btn" >VER MÁS</a>
+                                <Link to={"/"+each.nickname+"-"+each.nickname} className="waves-effect waves-light btn black white-text" id="btn" >VER MÁS</Link>
                                 <li className="waves-effect waves-light btn black white-text" id="btn" value={values} onClick={this.addCart}>Añadir al carrito</li>
                             </div>
                         </div>

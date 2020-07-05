@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/footerstyle.css';
 
 class Footer extends Component 
@@ -15,16 +16,16 @@ class Footer extends Component
                   </div>
 
                   <div className="col s3">
-                    <li><a className="grey-text text-lighten-3" href="#/about-us">Contacto</a></li>
+                    <li><Link to="/about-us" className="grey-text text-lighten-3" >Contacto</Link></li>
                   </div>
                   <div className="col s3">
-                    <li><a className="grey-text text-lighten-3" href="#!">Privacidad</a></li>
+                    <li><Link to="privacy" className="grey-text text-lighten-3">Privacidad</Link></li>
                   </div>
                   <div className="col s3">
-                    <li><a className="grey-text text-lighten-3" href="#!">Comunidad</a></li>
+                    <li><a className="grey-text text-lighten-3" href="https://www.facebook.com/">Comunidad</a></li>
                   </div>
                   <div className="col s3">
-                    <li><a className="grey-text text-lighten-3" href="#!">Equipo de trabajo</a></li>
+                    <li><Link to="/workteam" className="grey-text text-lighten-3">Equipo de trabajo</Link></li>
                   </div>
                 </div>
               </div>
