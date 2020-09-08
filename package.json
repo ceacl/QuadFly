@@ -1,21 +1,29 @@
 {
   "name": "quadfly",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
     "webpack": "webpack --mode development --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "axios": "^0.19.2",
     "express": "^4.17.1",
+    "gltf-webpack-loader": "^1.0.6",
     "mongoose": "^5.9.9",
     "morgan": "^1.10.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-select": "^3.1.0",
+    "three": "^0.117.1",
+    "three-gltf-loader": "^1.111.0",
+    "three-orbitcontrols": "^2.110.3"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -25,7 +33,12 @@
     "babel-loader": "^8.1.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "image-webpack-loader": "^6.0.0",
     "nodemon": "^2.0.3",
+    "react-axios": "^2.0.3",
+    "react-fiber": "^0.2.101",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },

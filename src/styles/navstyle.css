@@ -1,0 +1,20 @@
+
+
+.navbtn{
+    font-size: 12px;
+    color: #ffffff;
+    background-color: transparent;
+    border-radius: 5px;
+  
+  }
+  
+.navbtn:hover{
+    color: white;
+    background-color:rgba(22, 21, 21, 0.445);
+  }
+
+.nav-link
+{
+    color:whitesmoke;
+    font-size: 18px;
+}

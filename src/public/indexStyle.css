@@ -1,0 +1,101 @@
+body{
+    background-color: #eaeaea;
+}
+
+
+#containerLoading
+{
+    width: 100%;
+}
+
+#divnav
+{
+    background-color: black;
+    background: black;
+    color: aliceblue;
+
+}
+
+#inputSearch{
+    opacity: 50%;
+}
+
+.form-control
+{
+    background-color: black;
+    background: black;
+}
+
+navbtsn
+{
+    color: blanchedalmond;
+}
+
+.navbtn{
+    font-size: 12px;
+    color: #ffffff;
+    background-color: transparent;
+    border-radius: 5px;
+  
+  }
+  
+.navbtn:hover{
+    color: white;
+    background-color:rgba(22, 21, 21, 0.445);
+  }
+
+.nav-link
+{
+    color:whitesmoke;
+    font-size: 18px;
+}
+/**__________Footer__________________________________________________________________**/
+.foot
+{
+    background-color: black;
+    color: white;
+    text-align: center;
+    opacity: 70%;
+}
+
+/**___________HomeSection______________________________________________________________**/
+
+#bannerHome{
+
+    width: 100%;
+
+}
+
+/**____________Modal__________________________________________________________________________________________________**/
+
+.modal-dialog-full-width {
+    width: 102% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width:none !important;
+
+}
+
+.modal-content-full-width  {
+    height: 100% !important;
+    min-height: 100% !important;
+    border-radius: 0 !important;
+    background-color: black !important; 
+}
+
+.modal-header-full-width  {
+    border-bottom: 1px solid #9ea2a2 !important;
+}
+
+.modal-footer-full-width  {
+    border-top: 1px solid #9ea2a2 !important;
+}
+
+/**___________Products______________________________________________________________**/
+
+#btn{
+
+    margin-top: 2%;
+    margin-right: 1%;
+}
